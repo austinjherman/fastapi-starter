@@ -20,4 +20,4 @@ To handle migrations, we have to go into the container that's running the app. S
 
 Once running bash in the container, run `cd server` to get into the server directory. The quirk here is that I haven't been able to figure out how to import things from server/app into the server/migrations directory (according to trying to run the alembic command). So, to use the alembic command, we just need to prefix the command with `PYTHONPATH=.`.
 
-To to the initial migration then, we can do something like `PYTHONPATH=. alembic upgrade head`.
+To to the initial migration then, we can do something like `PYTHONPATH=. alembic revision -m "initial migration"`, then `PYTHONPATH=. alembic upgrade head`.

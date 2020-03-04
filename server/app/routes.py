@@ -3,9 +3,8 @@ from typing import List
 from fastapi import Depends, HTTPException, APIRouter
 from sqlalchemy.orm import Session
 
-from . import crud, schemas
-from .database import get_db
-
+from app import crud, schemas
+from app.database import get_db
 
 router = APIRouter()
 

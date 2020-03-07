@@ -4,9 +4,12 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 WORKDIR /app/server
+
+COPY ./requirements.txt ./requirements.txt
+RUN pip install -r ./requirements.txt --trusted-host=files.pythonhosted.org
+
 COPY . .
 
-RUN pip install -r ./requirements.txt --trusted-host=files.pythonhosted.org
-RUN chmod +x ./start.sh
+RUN chmod +x ./scripts/start.sh
 
 EXPOSE 80

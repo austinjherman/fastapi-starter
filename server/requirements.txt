@@ -4,7 +4,7 @@ bcrypt==3.1.7
 cffi==1.14.0
 Click==7.0
 entrypoints==0.3
-fastapi==0.49.0
+fastapi==0.65.2
 flake8==3.7.9
 gunicorn==20.0.4
 h11==0.9.0
